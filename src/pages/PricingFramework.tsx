@@ -1,4 +1,5 @@
-
+import { Card } from "@/components/ui/card";
+import GatedContent from "@/components/GatedContent";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -51,9 +52,16 @@ const PricingFramework = () => {
   return (
     <div className="max-w-4xl mx-auto">
       <h1 className="text-3xl font-semibold mb-6">Pricing & Incentive Framework</h1>
-      <div className="h-[300px] flex items-center justify-center border border-dashed border-gray-300 rounded-lg">
-        <p className="text-gray-500">Pricing & Incentive Framework content will be added here.</p>
-      </div>
+      <GatedContent title="Pricing & Incentive Framework">
+        <div className="space-y-6">
+          <Card className="p-6">
+            <h2 className="text-2xl font-medium mb-4">Pricing Strategy</h2>
+            <p className="text-gray-700">
+              Content from PDF section on pricing framework...
+            </p>
+          </Card>
+        </div>
+      </GatedContent>
     </div>
   );
 };
