@@ -1,7 +1,17 @@
 
 import { Link } from "react-router-dom";
-import { cn } from "@/lib/utils";
 import { Lock } from "lucide-react";
+import {
+  Sidebar,
+  SidebarContent,
+  SidebarHeader,
+  SidebarMenu,
+  SidebarMenuItem,
+  SidebarMenuButton,
+  SidebarProvider,
+  SidebarTrigger
+} from "@/components/ui/sidebar";
+import { cn } from "@/lib/utils";
 
 interface NavigationProps {
   activeTab: string;
@@ -53,33 +63,36 @@ const navigationItems = [
 
 const Navigation = ({ activeTab, setActiveTab }: NavigationProps) => {
   return (
-    <nav className="border-b border-gray-200 overflow-x-auto bg-white/80 backdrop-blur-sm sticky top-0 z-10">
-      <div className="flex space-x-1">
-        {navigationItems.map((item) => (
-          <Link
-            key={item.path}
-            to={item.path}
-            onClick={() => setActiveTab(item.path)}
-            className={cn(
-              "flex items-center whitespace-nowrap px-4 py-2 text-sm font-medium transition-all duration-200",
-              "hover:text-purple-600 relative after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-full",
-              "after:origin-center after:scale-x-0 after:bg-purple-600 after:transition-transform after:duration-200",
-              "hover:after:scale-x-100",
-              activeTab === item.path
-                ? "border-b-2 border-purple-600 text-purple-600"
-                : "text-gray-500"
-            )}
-          >
-            {item.name}
-            {item.gated && (
-              <Lock className="ml-1 h-3 w-3 text-current" />
-            )}
-          </Link>
-        ))}
-      </div>
-    </nav>
+    <Sidebar className="border-r">
+      <SidebarHeader className="p-4 border-b">
+        <h2 className="text-lg font-semibold">SOL Modern</h2>
+        <p className="text-sm text-muted-foreground">Strategy Blueprint</p>
+      </SidebarHeader>
+      <SidebarContent>
+        <SidebarMenu>
+          {navigationItems.map((item) => (
+            <SidebarMenuItem key={item.path}>
+              <SidebarMenuButton asChild>
+                <Link
+                  to={item.path}
+                  onClick={() => setActiveTab(item.path)}
+                  className={cn(
+                    "flex items-center justify-between w-full",
+                    activeTab === item.path && "text-purple-600 font-medium"
+                  )}
+                >
+                  <span>{item.name}</span>
+                  {item.gated && (
+                    <Lock className="h-3 w-3 text-current" />
+                  )}
+                </Link>
+              </SidebarMenuButton>
+            </SidebarMenuItem>
+          ))}
+        </SidebarMenu>
+      </SidebarContent>
+    </Sidebar>
   );
 };
 
 export default Navigation;
-

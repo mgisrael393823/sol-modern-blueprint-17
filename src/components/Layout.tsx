@@ -2,20 +2,26 @@
 import { useState } from "react";
 import { Outlet, useLocation } from "react-router-dom";
 import Navigation from "./Navigation";
+import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar";
 
 const Layout = () => {
   const location = useLocation();
   const [activeTab, setActiveTab] = useState(location.pathname);
 
   return (
-    <div className="flex flex-col min-h-screen bg-gradient-to-b from-white to-purple-50/20 font-sans">
-      <div className="container mx-auto px-4 py-8 flex-1 max-w-7xl">
+    <SidebarProvider>
+      <div className="flex w-full min-h-screen bg-gradient-to-b from-white to-purple-50/20 font-sans">
         <Navigation activeTab={activeTab} setActiveTab={setActiveTab} />
-        <main className="mt-8 animate-fadeIn">
-          <Outlet />
+        <main className="flex-1">
+          <div className="container px-4 py-8">
+            <SidebarTrigger className="mb-4" />
+            <div className="animate-fadeIn">
+              <Outlet />
+            </div>
+          </div>
         </main>
       </div>
-    </div>
+    </SidebarProvider>
   );
 };
 
