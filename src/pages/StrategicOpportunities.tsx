@@ -31,12 +31,28 @@ const StrategicOpportunities = () => {
         <div className="prose max-w-none">
           <h1 className="text-3xl font-semibold">Strategic Opportunities</h1>
           <div className="bg-purple-50 p-6 rounded-lg mb-8 border border-purple-100">
-            <p className="text-gray-700 leading-relaxed">
-              Our analysis reveals multiple high-impact opportunities in the local market, 
-              with a particular focus on untapped demographic segments and emerging lifestyle trends. 
-              Preliminary findings suggest potential for premium positioning in specific submarkets 
-              with strong growth indicators.
+            <p className="text-gray-700 leading-relaxed mb-4">
+              Explore how SOL Modern leverages soundproof living, premium tech, wellness amenities, 
+              and authentic neighborhood integration to stand apart in Downtown Phoenix's competitive landscape.
             </p>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6">
+              <div className="bg-white/60 p-4 rounded-lg border border-purple-100">
+                <h3 className="font-medium text-purple-900 mb-2">Featured Advantages</h3>
+                <ul className="text-sm text-gray-600 space-y-2">
+                  <li>• Next-gen soundproofing technology</li>
+                  <li>• Smart home integration</li>
+                  <li>• Wellness-focused amenities</li>
+                </ul>
+              </div>
+              <div className="bg-white/60 p-4 rounded-lg border border-purple-100">
+                <h3 className="font-medium text-purple-900 mb-2">Market Position</h3>
+                <ul className="text-sm text-gray-600 space-y-2">
+                  <li>• Premium downtown living</li>
+                  <li>• Local culture integration</li>
+                  <li>• Lifestyle-focused community</li>
+                </ul>
+              </div>
+            </div>
           </div>
         </div>
         
