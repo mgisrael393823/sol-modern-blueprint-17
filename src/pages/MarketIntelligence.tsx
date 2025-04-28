@@ -1,4 +1,3 @@
-
 import { Card, CardContent } from "@/components/ui/card";
 import { ChartBarIcon, TrendingUpIcon, UsersIcon, BuildingIcon, HomeIcon, PieChartIcon } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
@@ -159,7 +158,7 @@ const MarketIntelligence = () => {
                 </li>
                 <li className="flex items-center gap-2">
                   <span className="h-1.5 w-1.5 bg-blue-500 rounded-full"></span>
-                  Luxury segment (>$2,200/mo) performing exceptionally at 3.5% vacancy
+                  Luxury segment ({'>'}$2,200/mo) performing exceptionally at 3.5% vacancy
                 </li>
                 <li className="flex items-center gap-2">
                   <span className="h-1.5 w-1.5 bg-blue-500 rounded-full"></span>
