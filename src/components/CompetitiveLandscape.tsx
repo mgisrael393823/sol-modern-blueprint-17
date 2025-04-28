@@ -81,9 +81,84 @@ const strategicHighlights = [
   }
 ];
 
+const competitiveMatrix = [
+  {
+    property: "SOL Modern",
+    address: "400 E Roosevelt St",
+    yearBuilt: "2025 (Projected)",
+    studioRent: "$2,400",
+    oneBedroomRent: "$3,100",
+    twoBedroomRent: "$3,800",
+    amenities: "Premium fitness center, Sky lounge, Co-working space",
+    concessions: "None",
+    premiumFeatures: "Smart home tech, Premium appliances",
+    type: "projected"
+  },
+  {
+    property: "Altura",
+    address: "515 E Jefferson St",
+    yearBuilt: "2021",
+    studioRent: "$2,200",
+    oneBedroomRent: "$2,850",
+    twoBedroomRent: "$3,450",
+    amenities: "Pool, Fitness Center, Dog Park",
+    concessions: "1 month free on 13-month lease",
+    premiumFeatures: "Quartz countertops",
+    type: "competitor"
+  },
+  {
+    property: "The Stewart",
+    address: "800 N Central Ave",
+    yearBuilt: "2019",
+    studioRent: "$2,150",
+    oneBedroomRent: "$2,750",
+    twoBedroomRent: "$3,600",
+    amenities: "Rooftop pool, Fitness studio",
+    concessions: "2 weeks free",
+    premiumFeatures: "City views",
+    type: "competitor"
+  },
+  {
+    property: "Roosevelt Point",
+    address: "888 N 4th St",
+    yearBuilt: "2018",
+    studioRent: "$1,950",
+    oneBedroomRent: "$2,500",
+    twoBedroomRent: "$3,200",
+    amenities: "Pool, Study rooms",
+    concessions: "$500 off first month",
+    premiumFeatures: "None",
+    type: "competitor"
+  },
+  {
+    property: "Linear",
+    address: "295 E Roosevelt St",
+    yearBuilt: "2020",
+    studioRent: "$2,250",
+    oneBedroomRent: "$2,900",
+    twoBedroomRent: "$3,550",
+    amenities: "Pool, Gym, Courtyard",
+    concessions: "None",
+    premiumFeatures: "Smart thermostats",
+    type: "competitor"
+  },
+  {
+    property: "ILuminate",
+    address: "290 E Roosevelt St",
+    yearBuilt: "2019",
+    studioRent: "$2,100",
+    oneBedroomRent: "$2,800",
+    twoBedroomRent: "$3,400",
+    amenities: "Pool, Fitness Center",
+    concessions: "1 month free",
+    premiumFeatures: "None",
+    type: "competitor"
+  }
+];
+
 const CompetitiveLandscape = () => {
   return (
-    <div className="max-w-4xl mx-auto space-y-8 animate-fadeIn">
+    <div className="max-w-7xl mx-auto space-y-8 animate-fadeIn p-6">
       <h1 className="text-3xl font-semibold mb-6">Competitive Landscape Analysis</h1>
 
       {/* Key Metrics Highlight Blocks */}
@@ -124,40 +199,55 @@ const CompetitiveLandscape = () => {
         ))}
       </div>
 
-      {/* Competitor Analysis Table */}
+      {/* Full Competitive Matrix */}
       <div className="space-y-6">
-        <h2 className="text-2xl font-medium mb-4">Direct Competitors Analysis</h2>
-        <div className="rounded-lg border shadow-sm overflow-hidden bg-gradient-to-br from-white to-blue-50/30">
+        <h2 className="text-2xl font-medium mb-4">Complete Competitive Matrix</h2>
+        <div className="rounded-lg border shadow-sm overflow-x-auto bg-gradient-to-br from-white to-blue-50/30">
           <Table>
             <TableHeader>
               <TableRow className="bg-blue-50/50">
-                <TableHead>Property</TableHead>
-                <TableHead>Studio</TableHead>
-                <TableHead>1 Bed</TableHead>
-                <TableHead>2 Bed</TableHead>
-                <TableHead>Occupancy</TableHead>
-                <TableHead>Amenities</TableHead>
+                <TableHead className="font-semibold">Property</TableHead>
+                <TableHead className="font-semibold">Address</TableHead>
+                <TableHead className="font-semibold">Year Built</TableHead>
+                <TableHead className="font-semibold">Studio</TableHead>
+                <TableHead className="font-semibold">1 Bed</TableHead>
+                <TableHead className="font-semibold">2 Bed</TableHead>
+                <TableHead className="font-semibold">Amenities</TableHead>
+                <TableHead className="font-semibold">Concessions</TableHead>
+                <TableHead className="font-semibold">Premium Features</TableHead>
               </TableRow>
             </TableHeader>
             <TableBody>
-              {competitors.map((comp) => (
-                <TableRow key={comp.property} className="hover:bg-blue-50/20">
-                  <TableCell className="font-medium">{comp.property}</TableCell>
+              {competitiveMatrix.map((comp) => (
+                <TableRow 
+                  key={comp.property} 
+                  className={`hover:bg-blue-50/20 ${
+                    comp.type === "projected" ? "bg-purple-50/50 font-medium" : ""
+                  }`}
+                >
+                  <TableCell className="font-medium whitespace-nowrap">{comp.property}</TableCell>
+                  <TableCell className="whitespace-nowrap">{comp.address}</TableCell>
+                  <TableCell>{comp.yearBuilt}</TableCell>
                   <TableCell>{comp.studioRent}</TableCell>
                   <TableCell>{comp.oneBedroomRent}</TableCell>
                   <TableCell>{comp.twoBedroomRent}</TableCell>
-                  <TableCell>{comp.occupancy}</TableCell>
-                  <TableCell>{comp.amenityScore}</TableCell>
+                  <TableCell className="max-w-[200px]">{comp.amenities}</TableCell>
+                  <TableCell>
+                    {comp.concessions === "None" ? (
+                      <Badge variant="secondary">None</Badge>
+                    ) : (
+                      <Badge variant="destructive">{comp.concessions}</Badge>
+                    )}
+                  </TableCell>
+                  <TableCell>
+                    {comp.premiumFeatures === "None" ? (
+                      <Badge variant="secondary">None</Badge>
+                    ) : (
+                      <span className="text-sm">{comp.premiumFeatures}</span>
+                    )}
+                  </TableCell>
                 </TableRow>
               ))}
-              <TableRow className="bg-purple-50/50 font-medium">
-                <TableCell>SOL Modern (Projected)</TableCell>
-                <TableCell>$2,400</TableCell>
-                <TableCell>$3,100</TableCell>
-                <TableCell>$3,800</TableCell>
-                <TableCell>95%*</TableCell>
-                <TableCell>10/10</TableCell>
-              </TableRow>
             </TableBody>
           </Table>
         </div>
