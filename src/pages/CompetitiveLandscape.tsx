@@ -1,4 +1,3 @@
-
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 import { Card, CardContent } from "@/components/ui/card";
 import { ChartBarIcon, TrendingUpIcon, ChartPieIcon } from "lucide-react";
@@ -103,7 +102,7 @@ const CompetitiveLandscape = () => {
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
         {marketMetrics.map((metric) => (
-          <Card key={metric.title} className="hover:shadow-md transition-shadow">
+          <Card key={metric.title} className="hover:shadow-md transition-shadow bg-gradient-to-br from-white to-purple-50/50">
             <CardContent className="p-6">
               <div className="flex items-center gap-3 mb-3">
                 {metric.icon}
@@ -120,10 +119,10 @@ const CompetitiveLandscape = () => {
 
       <div className="space-y-6">
         <h2 className="text-2xl font-medium mb-4">Direct Competitors Analysis</h2>
-        <div className="rounded-lg border shadow-sm overflow-hidden">
+        <div className="rounded-lg border shadow-sm overflow-hidden bg-gradient-to-br from-white to-blue-50/30">
           <Table>
             <TableHeader>
-              <TableRow className="bg-purple-50">
+              <TableRow className="bg-blue-50/50">
                 <TableHead>Property</TableHead>
                 <TableHead>Studio</TableHead>
                 <TableHead>1 Bed</TableHead>
@@ -134,7 +133,7 @@ const CompetitiveLandscape = () => {
             </TableHeader>
             <TableBody>
               {competitors.map((comp) => (
-                <TableRow key={comp.property} className="hover:bg-purple-50/30">
+                <TableRow key={comp.property} className="hover:bg-blue-50/20">
                   <TableCell className="font-medium">{comp.property}</TableCell>
                   <TableCell>{comp.studioRent}</TableCell>
                   <TableCell>{comp.oneBedroomRent}</TableCell>
@@ -160,9 +159,9 @@ const CompetitiveLandscape = () => {
         <h2 className="text-2xl font-medium mb-4">Competitive Advantages</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           {competitiveAdvantages.map((category) => (
-            <Card key={category.category} className="hover:shadow-md transition-shadow">
+            <Card key={category.category} className="hover:shadow-md transition-shadow bg-gradient-to-br from-white to-green-50/30">
               <CardContent className="p-6">
-                <h3 className="text-lg font-medium mb-3 text-purple-900">{category.category}</h3>
+                <h3 className="text-lg font-medium mb-3 text-green-800">{category.category}</h3>
                 <ul className="list-disc list-inside space-y-2">
                   {category.advantages.map((advantage) => (
                     <li key={advantage} className="text-gray-600 text-sm">{advantage}</li>
@@ -174,7 +173,7 @@ const CompetitiveLandscape = () => {
         </div>
       </div>
 
-      <div className="mt-8 p-6 bg-gradient-to-r from-purple-50 to-white rounded-lg border border-purple-100">
+      <div className="mt-8 p-6 bg-gradient-to-br from-purple-50/50 to-white rounded-lg border border-purple-100">
         <h2 className="text-2xl font-medium mb-4">Market Position</h2>
         <p className="text-gray-700 leading-relaxed">
           SOL Modern is positioned as the premium option in the market, commanding a 10-15% 
@@ -184,7 +183,7 @@ const CompetitiveLandscape = () => {
         </p>
       </div>
 
-      <div className="p-6 bg-purple-50 rounded-lg border border-purple-100">
+      <div className="p-6 bg-gradient-to-br from-white to-purple-50/30 rounded-lg border border-purple-100">
         <h2 className="text-2xl font-medium mb-4">Strategic Differentiators</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div>
@@ -210,4 +209,3 @@ const CompetitiveLandscape = () => {
 };
 
 export default CompetitiveLandscape;
-
