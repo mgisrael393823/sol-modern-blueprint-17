@@ -64,8 +64,8 @@ const navigationItems = [
 const Navigation = ({ activeTab, setActiveTab }: NavigationProps) => {
   return (
     <Sidebar className="border-r">
-      <SidebarHeader className="p-4 border-b">
-        <h2 className="text-lg font-semibold">SOL Modern</h2>
+      <SidebarHeader className="p-4 border-b transition-colors duration-300">
+        <h2 className="text-lg font-semibold transition-colors duration-300 hover:text-purple-600">SOL Modern</h2>
         <p className="text-sm text-muted-foreground">Strategy Blueprint</p>
       </SidebarHeader>
       <SidebarContent>
@@ -77,13 +77,13 @@ const Navigation = ({ activeTab, setActiveTab }: NavigationProps) => {
                   to={item.path}
                   onClick={() => setActiveTab(item.path)}
                   className={cn(
-                    "flex items-center justify-between w-full",
-                    activeTab === item.path && "text-purple-600 font-medium"
+                    "flex items-center justify-between w-full transition-all duration-300 ease-in-out rounded-md px-3 py-2 hover:bg-purple-50/50",
+                    activeTab === item.path ? "text-purple-600 font-medium bg-purple-50/30" : "hover:text-purple-600"
                   )}
                 >
                   <span>{item.name}</span>
                   {item.gated && (
-                    <Lock className="h-3 w-3 text-current" />
+                    <Lock className="h-3 w-3 text-current transition-transform duration-300 group-hover:scale-110" />
                   )}
                 </Link>
               </SidebarMenuButton>
