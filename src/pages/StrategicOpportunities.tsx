@@ -13,8 +13,7 @@ const StrategicOpportunities = () => {
   const { toast } = useToast();
 
   const handleUnlock = () => {
-    // This is a placeholder. In a real app, you'd verify the password against a secure backend
-    if (password === "password123") { // Simple placeholder password
+    if (password === "password123") {
       setIsLocked(false);
     } else {
       toast({
@@ -32,24 +31,24 @@ const StrategicOpportunities = () => {
           <h1 className="text-3xl font-semibold">Strategic Opportunities</h1>
           <div className="bg-purple-50 p-6 rounded-lg mb-8 border border-purple-100">
             <p className="text-gray-700 leading-relaxed mb-4">
-              Explore how SOL Modern leverages soundproof living, premium tech, wellness amenities, 
-              and authentic neighborhood integration to stand apart in Downtown Phoenix's competitive landscape.
+              Explore key strategic advantages including innovative technology, premium features,
+              wellness amenities, and authentic market integration to stand apart in the competitive landscape.
             </p>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6">
               <div className="bg-white/60 p-4 rounded-lg border border-purple-100">
                 <h3 className="font-medium text-purple-900 mb-2">Featured Advantages</h3>
                 <ul className="text-sm text-gray-600 space-y-2">
-                  <li>• Next-gen soundproofing technology</li>
-                  <li>• Smart home integration</li>
-                  <li>• Wellness-focused amenities</li>
+                  <li>• Advantage point 1</li>
+                  <li>• Advantage point 2</li>
+                  <li>• Advantage point 3</li>
                 </ul>
               </div>
               <div className="bg-white/60 p-4 rounded-lg border border-purple-100">
                 <h3 className="font-medium text-purple-900 mb-2">Market Position</h3>
                 <ul className="text-sm text-gray-600 space-y-2">
-                  <li>• Premium downtown living</li>
-                  <li>• Local culture integration</li>
-                  <li>• Lifestyle-focused community</li>
+                  <li>• Position point 1</li>
+                  <li>• Position point 2</li>
+                  <li>• Position point 3</li>
                 </ul>
               </div>
             </div>
@@ -88,7 +87,7 @@ const StrategicOpportunities = () => {
           <Card className="p-6">
             <h2 className="text-2xl font-medium mb-4">Market Positioning</h2>
             <p className="text-gray-700">
-              Content from PDF section on strategic opportunities...
+              Detailed strategic opportunities content would be displayed here after authentication.
             </p>
           </Card>
         </div>

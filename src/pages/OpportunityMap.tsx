@@ -5,44 +5,44 @@ import { RocketIcon, StarIcon, MapPinIcon } from "lucide-react";
 const OpportunityMap = () => {
   const opportunities = [
     {
-      category: "Market Positioning",
+      category: "Category 1",
       icon: <StarIcon className="h-6 w-6 text-purple-600" />,
       items: [
         {
-          title: "Premium Brand Recognition",
-          description: "Establish SOL Modern as the leading luxury rental option in the market through targeted marketing and exceptional service delivery."
+          title: "Opportunity 1",
+          description: "Description of the first opportunity with key points and potential impact."
         },
         {
-          title: "Value Proposition",
-          description: "Emphasize unique features and premium amenities that differentiate from competitors."
+          title: "Opportunity 2",
+          description: "Description of the second opportunity with key points and potential impact."
         }
       ]
     },
     {
-      category: "Operational Excellence",
+      category: "Category 2",
       icon: <RocketIcon className="h-6 w-6 text-blue-600" />,
       items: [
         {
-          title: "Service Standards",
-          description: "Implement comprehensive training program and service protocols to ensure consistent premium experience."
+          title: "Opportunity 3",
+          description: "Description of the third opportunity with key points and potential impact."
         },
         {
-          title: "Amenity Programming",
-          description: "Develop robust calendar of resident events and amenity activations to build community."
+          title: "Opportunity 4",
+          description: "Description of the fourth opportunity with key points and potential impact."
         }
       ]
     },
     {
-      category: "Growth Strategy",
+      category: "Category 3",
       icon: <MapPinIcon className="h-6 w-6 text-green-600" />,
       items: [
         {
-          title: "Market Expansion",
-          description: "Identify opportunities for future developments in high-growth submarkets."
+          title: "Opportunity 5",
+          description: "Description of the fifth opportunity with key points and potential impact."
         },
         {
-          title: "Brand Evolution",
-          description: "Continue to refine and enhance the SOL Modern brand based on market feedback and resident preferences."
+          title: "Opportunity 6",
+          description: "Description of the sixth opportunity with key points and potential impact."
         }
       ]
     }
@@ -54,7 +54,7 @@ const OpportunityMap = () => {
 
       <div className="prose max-w-none mb-8">
         <p className="text-lg text-gray-700">
-          The SOL Modern opportunity map outlines key areas for growth, improvement, 
+          The opportunity map outlines key areas for growth, improvement, 
           and market penetration. This strategic framework provides a roadmap for 
           achieving and maintaining market leadership position.
         </p>
@@ -85,17 +85,17 @@ const OpportunityMap = () => {
           <div className="flex items-center gap-2">
             <span className="h-2 w-2 bg-red-500 rounded-full"></span>
             <span className="font-medium">High Priority (0-3 months):</span>
-            <span className="text-gray-600">Service standards implementation, initial brand positioning</span>
+            <span className="text-gray-600">Priority items for immediate implementation</span>
           </div>
           <div className="flex items-center gap-2">
             <span className="h-2 w-2 bg-yellow-500 rounded-full"></span>
             <span className="font-medium">Medium Priority (3-6 months):</span>
-            <span className="text-gray-600">Amenity programming, community building</span>
+            <span className="text-gray-600">Priority items for mid-term implementation</span>
           </div>
           <div className="flex items-center gap-2">
             <span className="h-2 w-2 bg-green-500 rounded-full"></span>
             <span className="font-medium">Long-term (6+ months):</span>
-            <span className="text-gray-600">Market expansion planning, brand evolution</span>
+            <span className="text-gray-600">Priority items for long-term implementation</span>
           </div>
         </div>
       </div>

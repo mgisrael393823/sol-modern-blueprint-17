@@ -13,8 +13,7 @@ const PricingFramework = () => {
   const { toast } = useToast();
 
   const handleUnlock = () => {
-    // This is a placeholder. In a real app, you'd verify the password against a secure backend
-    if (password === "password123") { // Simple placeholder password
+    if (password === "password123") {
       setIsLocked(false);
     } else {
       toast({
@@ -33,9 +32,9 @@ const PricingFramework = () => {
           <div className="bg-purple-50 p-6 rounded-lg mb-8 border border-purple-100">
             <p className="text-gray-700 leading-relaxed">
               Based on comprehensive market analysis and competitor benchmarking, 
-              we've developed an innovative pricing strategy that balances premium positioning 
+              we've developed an innovative pricing strategy that balances positioning 
               with market penetration objectives. Our framework includes dynamic pricing models 
-              and targeted incentive programs designed to optimize both occupancy and revenue.
+              and targeted incentive programs designed to optimize both engagement and revenue.
             </p>
           </div>
         </div>
@@ -72,7 +71,7 @@ const PricingFramework = () => {
           <Card className="p-6">
             <h2 className="text-2xl font-medium mb-4">Pricing Strategy</h2>
             <p className="text-gray-700">
-              Content from PDF section on pricing framework...
+              Detailed pricing framework content would be displayed here after authentication.
             </p>
           </Card>
         </div>

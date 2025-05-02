@@ -32,8 +32,8 @@ const GoToMarketRoadmap = () => {
           <div className="bg-purple-50 p-6 rounded-lg mb-8 border border-purple-100">
             <p className="text-gray-700 leading-relaxed">
               Our detailed implementation roadmap outlines key milestones and strategic initiatives 
-              across a 24-month timeline. The plan encompasses marketing activation, leasing strategies, 
-              and community engagement programs, with specific KPIs and success metrics for each phase.
+              across a specified timeline. The plan encompasses marketing activation strategies, 
+              and engagement programs, with specific KPIs and success metrics for each phase.
             </p>
           </div>
         </div>
@@ -70,7 +70,7 @@ const GoToMarketRoadmap = () => {
           <Card className="p-6">
             <h2 className="text-2xl font-medium mb-4">Implementation Timeline</h2>
             <p className="text-gray-700">
-              Content from PDF section on go-to-market roadmap...
+              Detailed roadmap content would be displayed here after authentication.
             </p>
           </Card>
         </div>

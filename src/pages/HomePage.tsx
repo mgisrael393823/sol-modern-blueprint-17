@@ -53,10 +53,10 @@ const HomePage = () => {
     <div className="space-y-8 animate-fadeIn">
       <div className="text-center space-y-6">
         <h1 className="text-4xl md:text-5xl font-semibold tracking-tight bg-gradient-to-r from-purple-600 to-purple-400 bg-clip-text text-transparent">
-          SOL Modern Strategy Blueprint
+          Strategy Blueprint Template
         </h1>
         <p className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
-          A comprehensive market analysis and strategic framework for SOL Modern's premium multifamily development. This blueprint provides detailed insights into market dynamics, competitive positioning, and strategic recommendations for optimizing lease-up performance and long-term value creation.
+          A comprehensive market analysis and strategic framework template. This blueprint provides detailed insights into market dynamics, competitive positioning, and strategic recommendations for optimizing performance and long-term value creation.
         </p>
       </div>
 

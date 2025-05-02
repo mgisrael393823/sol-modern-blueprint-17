@@ -1,3 +1,4 @@
+
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 import { Card, CardContent } from "@/components/ui/card";
 import { ChartBarIcon, TrendingUpIcon, ChartPieIcon, Star, Award, ShieldCheck } from "lucide-react";
@@ -5,7 +6,7 @@ import { Badge } from "@/components/ui/badge";
 
 const competitors = [
   {
-    property: "The Madison",
+    property: "Competitor A",
     distance: "0.5",
     occupancy: "94%",
     rentRange: "$2,200-3,500",
@@ -17,7 +18,7 @@ const competitors = [
     amenityScore: "8/10"
   },
   {
-    property: "The Reserve",
+    property: "Competitor B",
     distance: "0.8",
     occupancy: "96%",
     rentRange: "$2,300-3,600",
@@ -29,7 +30,7 @@ const competitors = [
     amenityScore: "9/10"
   },
   {
-    property: "Nexus Apartments",
+    property: "Competitor C",
     distance: "1.2",
     occupancy: "92%",
     rentRange: "$2,100-3,300",
@@ -44,19 +45,19 @@ const competitors = [
 
 const marketMetrics = [
   {
-    title: "Average Occupancy",
+    title: "Metric 1",
     value: "94%",
     trend: "+2.1% YoY",
     icon: <ChartBarIcon className="h-6 w-6 text-purple-600" />
   },
   {
-    title: "Absorption Rate",
+    title: "Metric 2",
     value: "45 units/month",
     trend: "Stable",
     icon: <TrendingUpIcon className="h-6 w-6 text-purple-600" />
   },
   {
-    title: "Market Share",
+    title: "Metric 3",
     value: "12%",
     trend: "Growing",
     icon: <ChartPieIcon className="h-6 w-6 text-purple-600" />
@@ -65,92 +66,92 @@ const marketMetrics = [
 
 const strategicHighlights = [
   {
-    title: "Superior Sound Insulation",
-    description: "Double-pane windows and enhanced wall insulation providing 40% better noise reduction",
+    title: "Strategic Highlight 1",
+    description: "Description of first strategic highlight and its benefits",
     icon: <ShieldCheck className="h-6 w-6 text-emerald-600" />
   },
   {
-    title: "Wellness Amenities Focus",
-    description: "3,500 sq ft fitness center and dedicated wellness spaces driving 25% premium",
+    title: "Strategic Highlight 2",
+    description: "Description of second strategic highlight and its benefits",
     icon: <Award className="h-6 w-6 text-emerald-600" />
   },
   {
-    title: "Premium Unit Features",
-    description: "Bosch appliance package and smart home integration commanding 15% rent premium",
+    title: "Strategic Highlight 3",
+    description: "Description of third strategic highlight and its benefits",
     icon: <Star className="h-6 w-6 text-emerald-600" />
   }
 ];
 
 const competitiveMatrix = [
   {
-    property: "SOL Modern",
-    address: "400 E Roosevelt St",
+    property: "Your Product",
+    address: "Main Address",
     yearBuilt: "2025 (Projected)",
     studioRent: "$2,400",
     oneBedroomRent: "$3,100",
     twoBedroomRent: "$3,800",
-    amenities: "Premium fitness center, Sky lounge, Co-working space",
+    amenities: "Premium features description",
     concessions: "None",
-    premiumFeatures: "Smart home tech, Premium appliances",
+    premiumFeatures: "Key feature 1, Key feature 2",
     type: "projected"
   },
   {
-    property: "Altura",
-    address: "515 E Jefferson St",
+    property: "Competitor 1",
+    address: "Address 1",
     yearBuilt: "2021",
     studioRent: "$2,200",
     oneBedroomRent: "$2,850",
     twoBedroomRent: "$3,450",
-    amenities: "Pool, Fitness Center, Dog Park",
-    concessions: "1 month free on 13-month lease",
-    premiumFeatures: "Quartz countertops",
+    amenities: "Feature list 1",
+    concessions: "Discount offer",
+    premiumFeatures: "Premium feature",
     type: "competitor"
   },
   {
-    property: "The Stewart",
-    address: "800 N Central Ave",
+    property: "Competitor 2",
+    address: "Address 2",
     yearBuilt: "2019",
     studioRent: "$2,150",
     oneBedroomRent: "$2,750",
     twoBedroomRent: "$3,600",
-    amenities: "Rooftop pool, Fitness studio",
-    concessions: "2 weeks free",
-    premiumFeatures: "City views",
+    amenities: "Feature list 2",
+    concessions: "Discount offer",
+    premiumFeatures: "Premium feature",
     type: "competitor"
   },
   {
-    property: "Roosevelt Point",
-    address: "888 N 4th St",
+    property: "Competitor 3",
+    address: "Address 3",
     yearBuilt: "2018",
     studioRent: "$1,950",
     oneBedroomRent: "$2,500",
     twoBedroomRent: "$3,200",
-    amenities: "Pool, Study rooms",
-    concessions: "$500 off first month",
+    amenities: "Feature list 3",
+    concessions: "Discount offer",
     premiumFeatures: "None",
     type: "competitor"
   },
   {
-    property: "Linear",
-    address: "295 E Roosevelt St",
+    property: "Competitor 4",
+    address: "Address 4",
     yearBuilt: "2020",
     studioRent: "$2,250",
     oneBedroomRent: "$2,900",
     twoBedroomRent: "$3,550",
-    amenities: "Pool, Gym, Courtyard",
+    amenities: "Feature list 4",
     concessions: "None",
-    premiumFeatures: "Smart thermostats",
+    premiumFeatures: "Premium feature",
     type: "competitor"
   },
   {
-    property: "ILuminate",
-    address: "290 E Roosevelt St",
+    property: "Competitor 5",
+    address: "Address 5",
     yearBuilt: "2019",
     studioRent: "$2,100",
     oneBedroomRent: "$2,800",
     twoBedroomRent: "$3,400",
-    amenities: "Pool, Fitness Center",
-    concessions: "1 month free",
+    amenities: "Feature list 5",
+    concessions: "Discount offer",
     premiumFeatures: "None",
     type: "competitor"
   }
@@ -209,12 +210,12 @@ const CompetitiveLandscape = () => {
                 <TableHead className="font-semibold">Property</TableHead>
                 <TableHead className="font-semibold">Address</TableHead>
                 <TableHead className="font-semibold">Year Built</TableHead>
-                <TableHead className="font-semibold">Studio</TableHead>
-                <TableHead className="font-semibold">1 Bed</TableHead>
-                <TableHead className="font-semibold">2 Bed</TableHead>
-                <TableHead className="font-semibold">Amenities</TableHead>
-                <TableHead className="font-semibold">Concessions</TableHead>
-                <TableHead className="font-semibold">Premium Features</TableHead>
+                <TableHead className="font-semibold">Option 1</TableHead>
+                <TableHead className="font-semibold">Option 2</TableHead>
+                <TableHead className="font-semibold">Option 3</TableHead>
+                <TableHead className="font-semibold">Features</TableHead>
+                <TableHead className="font-semibold">Incentives</TableHead>
+                <TableHead className="font-semibold">Premium Items</TableHead>
               </TableRow>
             </TableHeader>
             <TableBody>
@@ -257,10 +258,8 @@ const CompetitiveLandscape = () => {
       <div className="mt-8 p-6 bg-gradient-to-br from-purple-50/50 to-white rounded-lg border border-purple-100">
         <h2 className="text-2xl font-medium mb-4">Market Position</h2>
         <p className="text-gray-700 leading-relaxed">
-          SOL Modern is positioned as the premium option in the market, commanding a 10-15% 
-          price premium justified by superior unit specifications, comprehensive amenities, 
-          and enhanced service levels. Our pricing strategy reflects this premium positioning 
-          while maintaining competitive value through larger units and elevated features.
+          This section describes your market positioning strategy and competitive advantage in detail,
+          highlighting how your product stands out in the market and delivers superior value to customers.
         </p>
       </div>
 
@@ -269,19 +268,19 @@ const CompetitiveLandscape = () => {
         <h2 className="text-2xl font-medium mb-4">Strategic Differentiators</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div>
-            <h3 className="font-medium text-lg mb-2">Product Excellence</h3>
+            <h3 className="font-medium text-lg mb-2">Category A</h3>
             <ul className="space-y-2 list-disc list-inside text-gray-700">
-              <li>Largest average unit sizes in competitive set</li>
-              <li>Most comprehensive technology integration</li>
-              <li>Premium finishes package value $12k/unit above market</li>
+              <li>Differentiator point 1</li>
+              <li>Differentiator point 2</li>
+              <li>Differentiator point 3</li>
             </ul>
           </div>
           <div>
-            <h3 className="font-medium text-lg mb-2">Service Leadership</h3>
+            <h3 className="font-medium text-lg mb-2">Category B</h3>
             <ul className="space-y-2 list-disc list-inside text-gray-700">
-              <li>Only property with 24/7 concierge staffing</li>
-              <li>Dedicated resident experience team</li>
-              <li>Most extensive amenity programming calendar</li>
+              <li>Differentiator point 1</li>
+              <li>Differentiator point 2</li>
+              <li>Differentiator point 3</li>
             </ul>
           </div>
         </div>

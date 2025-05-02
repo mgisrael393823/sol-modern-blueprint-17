@@ -8,56 +8,56 @@ const ExecutiveSummary = () => {
       title: "Strengths",
       icon: <ShieldCheckIcon className="h-6 w-6 text-green-600" />,
       points: [
-        "Prime location in growing market area",
-        "Modern design and finishes",
-        "Competitive amenity package",
-        "Strong brand positioning"
+        "Key strength point 1",
+        "Key strength point 2",
+        "Key strength point 3",
+        "Key strength point 4"
       ]
     },
     {
       title: "Weaknesses",
       icon: <ShieldAlertIcon className="h-6 w-6 text-red-600" />,
       points: [
-        "Limited brand recognition",
-        "Above-market pricing strategy",
-        "Construction timeline delays",
-        "Initial lease-up period vulnerability"
+        "Key weakness point 1",
+        "Key weakness point 2",
+        "Key weakness point 3",
+        "Key weakness point 4"
       ]
     },
     {
       title: "Opportunities",
       icon: <LightbulbIcon className="h-6 w-6 text-yellow-600" />,
       points: [
-        "Growing demand for luxury rentals",
-        "Remote work trend increasing home-office demand",
-        "Tech sector employment growth",
-        "Limited new supply in immediate submarket"
+        "Key opportunity point 1",
+        "Key opportunity point 2",
+        "Key opportunity point 3",
+        "Key opportunity point 4"
       ]
     },
     {
       title: "Threats",
       icon: <TrendingUpIcon className="h-6 w-6 text-blue-600" />,
       points: [
-        "Increased competition from new developments",
-        "Economic uncertainty impact on rental market",
-        "Rising interest rates affecting investment returns",
-        "Shifting consumer preferences post-pandemic"
+        "Key threat point 1",
+        "Key threat point 2",
+        "Key threat point 3",
+        "Key threat point 4"
       ]
     }
   ];
 
   const recommendations = [
     {
-      title: "Strategic Positioning",
-      content: "Position SOL Modern as the premier luxury rental option with emphasis on modern design, premium amenities, and exceptional service."
+      title: "Strategic Recommendation 1",
+      content: "Description of the first strategic recommendation with key points and implementation guidelines."
     },
     {
-      title: "Pricing Strategy",
-      content: "Implement dynamic pricing model with strategic concessions during initial lease-up period while maintaining long-term value proposition."
+      title: "Strategic Recommendation 2",
+      content: "Description of the second strategic recommendation with key points and implementation guidelines."
     },
     {
-      title: "Marketing Focus",
-      content: "Target young professionals and tech sector employees with digital-first marketing approach and virtual touring options."
+      title: "Strategic Recommendation 3",
+      content: "Description of the third strategic recommendation with key points and implementation guidelines."
     }
   ];
 
@@ -68,10 +68,9 @@ const ExecutiveSummary = () => {
         
         <div className="prose max-w-none">
           <p className="text-lg text-gray-700 mb-6">
-            SOL Modern represents a significant opportunity in the luxury rental market, 
-            combining premium positioning with strategic timing in a growing market area. 
-            This analysis provides a comprehensive framework for successful market entry and 
-            sustained competitive advantage.
+            This executive summary provides a concise overview of the key findings, 
+            strategic recommendations, and implementation priorities outlined in the 
+            comprehensive strategy blueprint.
           </p>
         </div>
 
