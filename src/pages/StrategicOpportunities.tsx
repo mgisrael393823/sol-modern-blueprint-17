@@ -16,17 +16,17 @@ const StrategicOpportunities = () => {
             <div className="bg-white/60 p-4 rounded-lg border border-purple-100">
               <h3 className="font-medium text-purple-900 mb-2">Featured Advantages</h3>
               <ul className="text-sm text-gray-600 space-y-2">
-                <li>• Advantage point 1</li>
-                <li>• Advantage point 2</li>
-                <li>• Advantage point 3</li>
+                <li>Advantage point 1</li>
+                <li>Advantage point 2</li>
+                <li>Advantage point 3</li>
               </ul>
             </div>
             <div className="bg-white/60 p-4 rounded-lg border border-purple-100">
               <h3 className="font-medium text-purple-900 mb-2">Market Position</h3>
               <ul className="text-sm text-gray-600 space-y-2">
-                <li>• Position point 1</li>
-                <li>• Position point 2</li>
-                <li>• Position point 3</li>
+                <li>Position point 1</li>
+                <li>Position point 2</li>
+                <li>Position point 3</li>
               </ul>
             </div>
           </div>
