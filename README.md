@@ -1,4 +1,30 @@
-# Welcome to your Lovable project
+
+# Strategy Blueprint Template
+
+## Project Description
+
+This Strategy Blueprint Template provides a comprehensive framework for developing strategic business analyses and recommendations. It's designed to help consultants, business strategists, and organizations create well-structured strategy documents with a professional and modern interface.
+
+## Purpose
+
+The purpose of this template is to:
+
+- Provide a standardized framework for presenting strategic business analyses
+- Organize complex business data and recommendations into digestible sections
+- Deliver strategic insights through an intuitive, visually appealing interface
+- Enable easy customization for various business contexts and industries
+
+## Project Sections
+
+The template includes several key sections:
+
+- **Executive Summary**: High-level overview of strategic findings and recommendations
+- **Market Intelligence**: Analysis of market trends, demographics, and demand
+- **Competitive Landscape**: Detailed competitor analysis and market positioning
+- **Strategic Opportunities**: Exploration of key growth opportunities
+- **Pricing & Incentive Framework**: Strategic pricing recommendations
+- **Go-to-Market Roadmap**: Implementation timeline and execution strategy
+- **Opportunity Map**: Visual representation of market opportunities
 
 ## Project info
 
