@@ -1,82 +1,98 @@
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
+  /* Custom animated gradient for the title */
+  .title-gradient {
+    background: linear-gradient(-45deg, #7c3aed, #6d28d9, #8b5cf6, #7c3aed);
+    background-size: 200% 200%;
+    animation: gradient-animation 15s ease-in-out infinite;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  
+  @keyframes gradient-animation {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  
   :root {
+    /* Theme variables */
+    --color-primary: #7c3aed;
+    --color-primary-light: #e9d5ff;
+    --color-primary-dark: #6d28d9;
+    --color-secondary: #a78bfa;
+    --color-secondary-light: #f3e8ff;
+    --color-accent: #fde68a;
+    --color-background: #ffffff;
+    --color-text: #333333;
+    --color-text-secondary: #777777;
+    --color-sidebar: #f9fafb;
+    --color-sidebar-active: #f3e8ff;
+    --font-primary: 'Montserrat';
+    --font-secondary: 'Montserrat';
+    --border-radius: 0.5rem;
+    
+    /* Shadcn/ui variables - map to our theme */
     --background: 0 0% 100%;
     --foreground: 222.2 84% 4.9%;
-
     --card: 0 0% 100%;
     --card-foreground: 222.2 84% 4.9%;
-
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
-
-    --primary: 222.2 47.4% 11.2%;
+    --primary: 265 89% 58%;
     --primary-foreground: 210 40% 98%;
-
-    --secondary: 210 40% 96.1%;
+    --secondary: 270 76% 95%;
     --secondary-foreground: 222.2 47.4% 11.2%;
-
     --muted: 210 40% 96.1%;
     --muted-foreground: 215.4 16.3% 46.9%;
-
     --accent: 210 40% 96.1%;
     --accent-foreground: 222.2 47.4% 11.2%;
-
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
-
     --border: 214.3 31.8% 91.4%;
     --input: 214.3 31.8% 91.4%;
     --ring: 222.2 84% 4.9%;
-
-    --radius: 0.5rem;
-
-    --sidebar-background: 0 0% 98%;
-
-    --sidebar-foreground: 240 5.3% 26.1%;
-
-    --sidebar-primary: 240 5.9% 10%;
-
+    --radius: var(--border-radius);
+    
+    /* Sidebar specific variables */
+    --sidebar-background: var(--color-sidebar);
+    --sidebar-foreground: var(--color-text);
+    --sidebar-primary: #000000;
     --sidebar-primary-foreground: 0 0% 98%;
-
-    --sidebar-accent: 240 4.8% 95.9%;
-
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
+    --sidebar-accent: #f0f0f0;
+    --sidebar-accent-foreground: #000000;
     --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --sidebar-ring: 0 0% 0%;
   }
 
+  /* Keep the dark mode definitions, but adjust to use our variables */
   .dark {
     --background: 222.2 84% 4.9%;
     --foreground: 210 40% 98%;
-
     --card: 222.2 84% 4.9%;
     --card-foreground: 210 40% 98%;
-
     --popover: 222.2 84% 4.9%;
     --popover-foreground: 210 40% 98%;
-
     --primary: 210 40% 98%;
     --primary-foreground: 222.2 47.4% 11.2%;
-
     --secondary: 217.2 32.6% 17.5%;
     --secondary-foreground: 210 40% 98%;
-
     --muted: 217.2 32.6% 17.5%;
     --muted-foreground: 215 20.2% 65.1%;
-
     --accent: 217.2 32.6% 17.5%;
     --accent-foreground: 210 40% 98%;
-
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 210 40% 98%;
-
     --border: 217.2 32.6% 17.5%;
     --input: 217.2 32.6% 17.5%;
     --ring: 212.7 26.8% 83.9%;
@@ -97,12 +113,14 @@
   }
 
   body {
-    @apply bg-background text-textPrimary font-sans;
+    @apply bg-themeBackground text-textPrimary;
+    font-family: var(--font-primary), system-ui, sans-serif;
   }
 
   /* Typography System */
   h1, h2, h3, h4, h5, h6 {
-    @apply font-heading font-semibold text-textPrimary leading-tight;
+    font-family: var(--font-secondary), system-ui, sans-serif;
+    @apply font-semibold text-textPrimary leading-tight;
   }
 
   h1 {
@@ -158,5 +176,25 @@
   
   .prose ul li {
     @apply text-sm md:text-base text-textSecondary;
+  }
+  
+  /* Theme-specific utility classes */
+  .bg-theme-gradient {
+    background: linear-gradient(to bottom, var(--color-background), color-mix(in srgb, var(--color-primary-light) 10%, var(--color-background)));
+  }
+  
+  .text-theme-gradient {
+    background: linear-gradient(to right, var(--color-primary), var(--color-primary-dark));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  
+  .border-theme {
+    border-color: var(--color-primary-light);
+  }
+  
+  .card-highlight {
+    @apply border-l-4 border-themePrimary;
   }
 }
