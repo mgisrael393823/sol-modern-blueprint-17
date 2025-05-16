@@ -1,9 +1,7 @@
 import React from 'react';
-import { Card, CardContent } from "@/components/ui/card";
 import { Link } from "react-router-dom";
-import { Lock, ArrowRight } from "lucide-react";
+import { ArrowRight, ChevronRight } from "lucide-react";
 import { useContent } from '@/lib/ContentProvider';
-import { CardGrid } from '@/components/layouts/GridLayouts';
 import ExecutiveSummaryHighlights from '@/components/ExecutiveSummaryHighlights';
 
 // Helper function to filter out specific sections
@@ -19,76 +17,79 @@ const HomePage = () => {
   const filteredSections = filterSections(sections, ["/executive-summary"]);
   
   return (
-    <div className="space-y-8">
-      <div className="text-center space-y-6 py-8">
-        <div className="relative inline-block group cursor-default">
-          <h1 className="text-3xl md:text-5xl font-bold tracking-tight text-themePrimary pb-2 px-1 transition-transform duration-500 group-hover:scale-105">
-            {siteTitle}
-          </h1>
-          <div className="absolute bottom-0 left-0 h-[3px] w-full bg-gradient-to-r from-themePrimary/80 via-themeSecondary/90 to-themePrimaryDark/80 rounded-full shadow-sm"></div>
-          <div className="absolute -inset-1 bg-themePrimary/5 rounded-lg blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-        </div>
-        <p className="text-base md:text-xl text-textSecondary max-w-3xl mx-auto leading-relaxed mt-8">
+    <div className="max-w-5xl mx-auto space-y-10">
+      {/* Clean, professional header */}
+      <header className="mb-6 pb-4 border-b border-gray-200">
+        <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-3">
+          {siteTitle}
+        </h1>
+        <p className="text-lg text-gray-600 max-w-3xl leading-relaxed">
           {siteDescription}
         </p>
-      </div>
+      </header>
       
-      {/* Executive Summary Highlights */}
-      <ExecutiveSummaryHighlights 
-        swotItems={executiveSummary.swotItems}
-        recommendations={executiveSummary.recommendations}
-        introText={executiveSummary.introText}
-      />
+      {/* Executive Summary */}
+      <section className="mb-12">
+        <ExecutiveSummaryHighlights 
+          swotItems={executiveSummary.swotItems}
+          recommendations={executiveSummary.recommendations}
+          introText={executiveSummary.introText}
+        />
+      </section>
 
-      <div className="mt-12">
-        <h2 className="text-2xl font-medium mb-6 flex items-center">
-          <span className="bg-themePrimary/10 w-10 h-10 rounded-full flex items-center justify-center mr-3">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-5 h-5 text-themePrimary">
-              <rect width="18" height="18" x="3" y="3" rx="2" ry="2"></rect>
-              <path d="M7 7h.01"></path>
-              <path d="M7 12h.01"></path>
-              <path d="M7 17h.01"></path>
-              <path d="M12 7h5"></path>
-              <path d="M12 12h5"></path>
-              <path d="M12 17h5"></path>
-            </svg>
-          </span>
+      {/* Blueprint Sections - clean layout */}
+      <section className="mb-8">
+        <h2 className="text-xl font-semibold mb-6 pb-2 border-b border-gray-200">
           Blueprint Sections
         </h2>
-        <CardGrid columns="3x2">
+        
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-8">
           {filteredSections.map((section, index) => (
             <Link 
               to={section.path} 
-              key={section.path} 
-              className="no-underline group"
-              style={{ animationDelay: `${index * 150}ms` }}
+              key={section.path}
+              className="group flex flex-col border border-gray-200 rounded-lg p-5 bg-white hover:border-gray-300 hover:shadow-sm transition-all duration-200 no-underline"
             >
-              <Card className="h-full transition-all duration-200 hover:shadow-xl hover:scale-[1.03] hover:border-themePrimaryLight overflow-hidden backdrop-blur-sm bg-white/90 hover:bg-glass-gradient animate-slide-up">
-                <CardContent className="p-6 flex flex-col space-y-4 relative">
-                  <div className="absolute top-0 right-0 h-20 w-20 bg-gradient-to-br from-themePrimary/10 to-transparent rounded-bl-3xl -z-10" />
-                  <div className="absolute -left-6 -bottom-6 w-20 h-20 rounded-full bg-themePrimary/5 -z-10" />
-                  
-                  <div className="flex items-center justify-between">
-                    <h3 className="text-base md:text-lg font-bold normal-case tracking-normal group-hover:text-themePrimary transition-colors">
-                      {section.title}
-                    </h3>
-                    {section.gated && <Lock className="h-4 w-4 text-gray-400 group-hover:text-themePrimary transition-colors" />}
-                  </div>
-                  
-                  <div className="h-0.5 w-8 bg-gradient-to-r from-themePrimary to-transparent rounded-full opacity-70 group-hover:w-12 transition-all duration-300"></div>
-                  
-                  <p className="text-sm text-textSecondary leading-relaxed">{section.summary}</p>
-                  
-                  <div className="pt-2 mt-auto flex items-center text-themePrimary text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300 border-t border-themePrimaryLight/20 pt-3">
-                    <span>View section</span>
-                    <ArrowRight className="h-4 w-4 ml-1 transform group-hover:translate-x-1 transition-transform"/>
-                  </div>
-                </CardContent>
-              </Card>
+              <h3 className="text-lg font-medium text-gray-800 group-hover:text-black transition-colors mb-2">
+                {section.title}
+              </h3>
+              
+              <p className="text-sm text-gray-600 flex-grow mb-4">
+                {section.summary}
+              </p>
+              
+              <div className="flex items-center text-sm font-medium text-gray-600 group-hover:text-black transition-colors mt-auto">
+                <span>Explore section</span>
+                <ChevronRight className="h-4 w-4 ml-1 group-hover:ml-2 transition-all" />
+              </div>
             </Link>
           ))}
-        </CardGrid>
-      </div>
+        </div>
+      </section>
+      
+      {/* Integration section */}
+      <section className="bg-gray-50 rounded-lg p-6 border border-gray-200">
+        <h2 className="text-xl font-semibold mb-3">How to Use This Blueprint</h2>
+        <p className="text-gray-600 mb-4">
+          This strategic blueprint provides a comprehensive analysis of market conditions, competitive positioning, and growth opportunities. Navigate through each section to gain insights and actionable recommendations.
+        </p>
+        
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-5">
+          <div className="bg-white p-4 rounded border border-gray-200">
+            <h3 className="text-base font-medium mb-2">For Strategic Planning</h3>
+            <p className="text-sm text-gray-600">
+              Focus on the Executive Summary, Strategic Opportunities, and Roadmap sections to inform your planning process.
+            </p>
+          </div>
+          
+          <div className="bg-white p-4 rounded border border-gray-200">
+            <h3 className="text-base font-medium mb-2">For Market Research</h3>
+            <p className="text-sm text-gray-600">
+              Explore the Market Intelligence and Competitive Landscape sections for in-depth analysis of market conditions.
+            </p>
+          </div>
+        </div>
+      </section>
     </div>
   );
 };
