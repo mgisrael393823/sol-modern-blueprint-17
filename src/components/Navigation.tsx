@@ -1,4 +1,3 @@
-
 import { Link } from "react-router-dom";
 import { Lock } from "lucide-react";
 import {
@@ -20,11 +19,6 @@ const navigationItems = [
   { 
     name: "Home", 
     path: "/", 
-    gated: false 
-  },
-  { 
-    name: "Executive Summary", 
-    path: "/executive-summary", 
     gated: false 
   },
   { 
@@ -63,8 +57,14 @@ const Navigation = ({ activeTab, setActiveTab }: NavigationProps) => {
   return (
     <Sidebar className="border-r">
       <SidebarHeader className="p-4 border-b transition-colors duration-300">
-        <h2 className="text-lg font-semibold transition-colors duration-300 hover:text-purple-600">SOL Modern</h2>
-        <p className="text-xs text-muted-foreground">Strategy Blueprint</p>
+        <h2 className="text-lg font-semibold transition-colors duration-300 hover:text-black text-black">
+          SOL Modern
+        </h2>
+        <div className="mt-1">
+          <p className="text-sm font-medium text-muted-foreground">
+            Strategy Blueprint
+          </p>
+        </div>
       </SidebarHeader>
       <SidebarContent>
         <SidebarMenu>
@@ -75,8 +75,10 @@ const Navigation = ({ activeTab, setActiveTab }: NavigationProps) => {
                   to={item.path}
                   onClick={() => setActiveTab(item.path)}
                   className={cn(
-                    "flex items-center justify-between w-full transition-all duration-300 ease-in-out rounded-md px-3 py-2 hover:bg-purple-50/50",
-                    activeTab === item.path ? "text-purple-600 font-medium bg-purple-50/30" : "hover:text-purple-600"
+                    "flex items-center justify-between w-full transition-all duration-300 ease-in-out rounded-md px-3 py-2 hover:bg-gray-100",
+                    activeTab === item.path 
+                      ? "text-black font-medium bg-gray-100" 
+                      : "hover:text-black"
                   )}
                 >
                   <span className="text-sm">{item.name}</span>
