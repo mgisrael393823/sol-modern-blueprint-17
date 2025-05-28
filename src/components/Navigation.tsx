@@ -1,3 +1,4 @@
+
 import { Link } from "react-router-dom";
 import { Lock } from "lucide-react";
 import {
@@ -61,7 +62,7 @@ const Navigation = ({ activeTab, setActiveTab }: NavigationProps) => {
           SOL Modern
         </h2>
         <div className="mt-1">
-          <p className="text-sm font-medium text-muted-foreground">
+          <p className="text-sm font-medium text-blue-600">
             Strategy Blueprint
           </p>
         </div>
